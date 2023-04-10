@@ -38,9 +38,9 @@ const getAudioDevices = (pathToSunshineAudioTool = 'C:\\Program Files\\Sunshine\
     .split('===== Device =====')
     .filter((entry) => entry.trim().split('\n').filter(Boolean).length > 0)
     .forEach((entry) => {
-      const deviceEntry = entry.trim().split('\n').filter(Boolean);
+      const deviceEntry = entry.trim()?.split('\n')?.filter(Boolean);
 
-      if (deviceEntry.length === 0) return;
+      if (!deviceEntry || deviceEntry.length === 0) return;
 
       const device = deviceEntry.reduce<IDevice>((accumulator, line) => {
         const [key, value] = line.split(': ');
