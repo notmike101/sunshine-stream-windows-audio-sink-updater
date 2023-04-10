@@ -5,7 +5,9 @@
   "main": "src/main.ts",
   "type": "module",
   "scripts": {
-    "start": "ts-node --esm src/main.ts"
+    "dev": "ts-node src/main.ts",
+    "build": "tsc --build",
+    "start": "node dist/main.js"
   },
   "author": {
     "name": "Mike Orozco",
