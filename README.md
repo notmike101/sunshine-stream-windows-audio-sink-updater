@@ -7,7 +7,15 @@ Allows users to set the audio_sink and virtual_sink devices by specifying the de
 
 ## Usage
 
-Since this is written in typescript, use either `npx ts-node --esm src/main.ts` or `npm start` to run the script.
+Since this is written in typescript, so you must build this using `npm run build` before using.
+
+Once built, use `npm start` to run the script.
+
+
+### Windows Task Scheduler
+
+I recommend using the Windows Task Schedule and creating a task to run the script on startup.
+See `TASK.xml` for an example of how to do this.
 
 ### Options:
   `-h, --help`: display help for command
